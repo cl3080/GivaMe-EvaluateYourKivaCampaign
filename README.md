@@ -5,3 +5,4 @@ Kiva.org, a microfinance plaform, has crow-funded more than a million loans, tot
 
 To help users on Kiva get some priori insights on their loan requests promotions, I built a web app that can predict the chance of a loan request being fully funded and provide suggestions on improving the context of the campaign website. The pipeline for modelling is shown as following:
 
+![Modelling pipeline](https://github.com/cl3080/GivaMe-EvaluateYourKivaCampaign/blob/master/pipeline.png))
