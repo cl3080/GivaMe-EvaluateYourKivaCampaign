@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<style>
+.div1 {
+  width: 300px;
+  height: 25px;
+  border: 1px black;
+}
+
+.boxed {
+  width: 500px;
+  height: 200px;
+  border: 1px black;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+  color:black;
+}
+
+label {
+  font-family: Arial;
+  font-size: 18px;
+  color: #040507;
+  display: block;
+}
+
+p1 {
+  font-family: Arial;
+  font-size: 18px;
+  color: #040507;
+  display: block;
+}
+
+.button4 {
+   padding: 18px 30px;
+   background-color: #4CAF50;
+   border: none;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 20px;
+   cursor: pointer;
+   border-radius: 8px;
+}
+
+</style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/starter-template/">
+
+    <title>Kiva Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<body style="background:url('../static/images/bg_2.jpg');height = 100%;background-attachment:fixed; background-repeat: no-repeat;background-size:cover;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          </button>
+        </div>
+      </div>
+<br><br>
+
+
+<div class="container">
+   <div class="starter-template">
+       <h1 style = "color:darkgreen;text-align:center;font-family: Arial;"><b>Evaluate your Kiva campaign!</b></h1>
+   </div>
+
+	<div class = "starter-template">
+       <h3 style = "color:darkgreen;text-align:left;font-family: Arial;"><b>About the loan</h3>
+   </div>
+   <div class = "w3-display-middle">
+     <form action="/output" method="POST">
+  		<label for="LOAN_AMOUNT;"> Loan amount ($):<br></label>
+         	<input class="w3-input w3-border w3-round" type="number" id="LOAN_AMOUNT" name='LOAN_AMOUNT' placeholder="550 "  type = "submit" value = "submit">
+	</div>
+
+   <div class = "starter-template">
+     <form action="/output" method="POST">
+                <label for ="SECTOR_NAME";>Loan use:<br></label>
+                        <select class="w3-select w3-display-middle" name="SECTOR_NAME">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Housing">Housing</option>
+                        <option value="Services">Services</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Education">Education</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Personal">Personal Use</option>
+                        <option value="Health">Health</option>
+                        <option value="Wholesale">Wholesale</option>
+                        <option value="Food">Food</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                </select>
+
+	<div class = "w3-display-middle">
+     		<form action="/output" method="POST">
+		<label for="REPAYMENT_INTERVAL">How to repay the loan:<br></label>
+		<input class="w3-check" type="checkbox" checked="checked" name='REPAYMENT_INTERVAL' value = "monthly">
+		<label>Monthly</label>
+		<input class="w3-check" type="checkbox" name='REPAYMENT_INTERVAL' value = "irregularly">
+		<label>Irregularly</label>
+		</div>
+
+                <label for="DISTRIBUTION_MODEL">Distribution model:<br></label>
+                <input class="w3-check" type="checkbox" checked="checked" name = "DISTRIBUTION_MODEL" value = "direct">
+                <label>Direct</label>
+
+                <input class="w3-check" type="checkbox" name = "DISTRIBUTION_MODEL" value = "field_partner">
+                <label>Field partner</label>
+                </div>
+
+        <div class = "starter-template">
+       <h3 style = "color:darkgreen;text-align:left;font-family:Arial;"><b>About you/your group</h3>
+   </div>
+                <label for="Female number"> Female:<br></label>
+                <input type="number" id="Female" name='Female' style='width:80px;height:25px;' placeholder="1 ">
+
+                <label for="Male number"> Male:<br></label>
+                <input type="number" id="Male" name='Male' style='width:80px;height:25px;' placeholder="1 ">
+
+   <div class = "w3-display-middle">
+     <form action="/output" method="POST">
+        <label for="Tags"> Tags:<br></label>
+                <input type="text" id="Tags" name='Tags' style='width:235px;height:25px;' placeholder="#Job Creator">
+        </div>
+
+	<p1>Personal story:</p1>
+		<textarea name = "Description" placeholder = "Tell more about yourself..."> </textarea>
+
+	</p>
+ </div>
+       <div>
+	 <p1 align="center">
+         <button type="submit" class="button button4">GO!</button>
+      	 </p1>
+	 </div>
+     </form>
+   </div>
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <script src="static/js/bootstrap.min.js"></script>
+ </div> <!-- /.container-->
+
+
+<div class="container">
+
+ </div> <!-- /.container-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>

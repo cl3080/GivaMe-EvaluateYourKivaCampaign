@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiva-insight</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p1 {
+  font-family: Arial;
+  font-size: 18px;
+  color: #040507;
+  display: block;
+}
+
+</style>
+</head>
+
+
+<body>
+<body style="background:url('../static/images/bg_2.jpg');height = 100%;background-attachment:fixed; background-repeat: no-repeat;background-size:cover;">
+<br><br><br>
+<div class="container">
+
+   <div class="starter-template">
+       <h3 style = "color:black;text-align:center;font-family:Arial;">The chance of your loan being successfully funded is</h3>
+   </div>
+
+   <div class="starter-template">
+       <h1 style = "color:green;font-size:50px;text-align:center;font-family:Arial;">{{prediction}}%</b></h1>
+   </div>
+
+
+<h2 style = "font-family: Arial;text-align:left;">To improve your campaign website</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 style = "font-family: Arial;">Write a better personal story</h3>
+      </div>
+      <div style = "font-family: Arial;">
+        If you add more contents on these topics, you could increase your chance!
+        <ul>
+         <li>{{topic1}}</li>
+         <li>{{topic2}}</li>
+         <li>{{topic3}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {%if num_tags <= 2%}
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 style = "font-family: Arial;">Help lenders find you</h3>
+      </div>
+      <div style = "font-family: Arial;">
+        If you add at least 2 tags, you could increase your chance!
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+  </div>
+</div>
+
+</body>
+</html>
