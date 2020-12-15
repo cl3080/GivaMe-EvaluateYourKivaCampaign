@@ -20,4 +20,3 @@ You will see the chance of your loan request being fully funded and some tips fo
 ### Author
 Chao Li
 
-To be continued...
